@@ -1,4 +1,5 @@
 version: "3.7"
+
 services:
   app:
     image: node:12-alpine
@@ -13,6 +14,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: secret
       MYSQL_DB: todos
+
   mysql:
     image: mysql:5.7
     volumes: 
@@ -20,6 +22,7 @@ services:
     environment: 
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: todos
+      
 volumes: 
   todo-mysql-data:
 
